@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+</head>
+<body>
+<h2>Register</h2>
+<p th:text="${msg1}"></p>
+<form th:action="@{/saveUser}" th:object="${register}" method="post">
+    UserName:<input type="text" th:field="*{name}" required>
+    <br><br>
+    Email:<input type="email" th:field="*{email}" required>
+    <br><br>
+    Phno:<input type="number"  th:field="*{phno}" required>
+    <br><br>
+    Password:<input type="password" th:field="*{password}" required>
+    <br><br>
+    <button type="submit">Register</button>
+    <a  href="/login">login</a>
+</form>
+</body>
+</html>
